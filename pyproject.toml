@@ -1,0 +1,29 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["exif_count*"]
+
+[project]
+name = "exif_count"
+version = "1.0.0"
+authors = [{name="Po-Hsuan Huang", email="aben20807@gmail.com"}]
+description = "Make statistic for photos"
+readme = "README.md"
+license = {file = "LICENSE"}
+requires-python = ">=3.8"
+classifiers = [
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Multimedia :: Graphics",
+]
+dependencies = ["pillow", "termplotlib"]
+
+[project.urls]
+"Homepage" = "https://github.com/aben20807/exif_count"
+"Bug Tracker" = "https://github.com/aben20807/exif_count/issues"
+
+[project.scripts]
+exif_count = "exif_count.exif_count:cli"
